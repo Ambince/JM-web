@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c3p0-config>
+  <default-config>
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql://182.92.188.137:3306/jiameng</property>
+    <property name="user">jmchengjmduim</property>
+    <property name="password">JM3@2#jm56799td5@aFA</property>
+    <property name="useUnicode">true</property>
+    <property name="autoReconnect">true</property>
+    <property name="rewriteBatchedStatements">true</property>
+    <property name="characterEncoding">utf8</property>
+
+  </default-config>
+</c3p0-config>
+	

@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+ul,ol,li {
+	margin: 0; /*设置外补白为0*/
+	padding: 0; /*设置内补白为0*/
+	list-style-type: none;
+}
+
+.font_red {
+	color: #FF0000;
+}
+
+.font_b {
+	font-weight: bold;
+}
+
+.diary_pic {
+	width: 25px;
+	height: 25px;
+	border: 0;
+}
+
+table {
+	width: 98%;
+	border: solid #F0F0F0;
+	border-width: 1px 0px 0px 1px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+td {
+	border: solid #F0F0F0;
+	border-width: 0px 1px 1px 0px;
+	padding: 5px 3px;
+}
+
+td a {
+	color: #FF0000;
+}
+
+td a:hover {
+	color: #FF33FF;
+	font-size: 16px;
+}
+
+.adminlogo {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: #00AA00;
+	border-bottom: #F0F0F0 1px solid;
+	line-height: 40px;
+}
+
+.admin {
+	line-height: 40px;
+	height: 40px;
+}
+
+.admin ul {
+	padding: 0 5px;
+}
+
+.tuichu {
+	line-height: 40px;
+	text-align: center;
+	float: right;
+}
+
+.tuichu a {
+	color: #FF0000;
+}
+
+.tuichu a:hover {
+	color: #FF33FF;
+	font-size: 16px;
+}
+
+.lanmu {
+	paddingleft: font-weight:bold;
+	font-size: 16px;
+	text-align: left;
+	border-bottom: #F0F0F0 1px solid;
+	background: #F0F0F0;
+	line-height: 30px;
+	padding-right: 5px;
+	color: #333;
+}
+
+.gongneng {
+	text-align: left;
+	border-bottom: #F0F0F0 1px solid;
+	line-height: 25px;
+	padding-right: 5px;
+}
+
+.gongneng a {
+	color: #00AA00;
+}
+
+.gongneng a:hover {
+	color: #FF0000;
+	font-size: 16px;
+}
+
+.fanye {
+	background: #F0F0F0;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.fanye  a {
+	color: #009900;
+}
+
+.fanye  a:hover {
+	color: #FF0000;
+	font-size: 16px;
+}

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name></display-name>
+    <!-- 全站参数配置 -->
+    <context-param>
+        <description>全站编码配置</description>
+        <param-name>encode</param-name>
+        <param-value>utf-8</param-value>
+    </context-param>
+    <!-- 404 页面不存在错误 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+    <!-- 500 服务器内部错误 -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+    </error-page>
+    <!-- 全站参数配置 -->
+
+
+    <!-- 管理员验证过滤器配置 -->
+    <filter>
+        <filter-name>AdminValidateFilter</filter-name>
+        <filter-class>ssoft.filter.AdminValidateFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminValidateFilter</filter-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminValidateFilter</filter-name>
+        <url-pattern>/HandleReportServler</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminValidateFilter</filter-name>
+        <url-pattern>/IslandServlet</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminValidateFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <!-- Servlet配置 -->
+
+
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>ssoft.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckBindServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckBindServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>ssoft.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SmsVerifyServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SmsVerifyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckPhoneServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckPhoneServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>RetrievePasswordServlet</servlet-name>
+        <servlet-class>ssoft.servlet.RetrievePasswordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SaveSyssetServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SaveSyssetServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetSyssetServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetSyssetServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SaveBaseInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SaveBaseInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetBaseInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetBaseInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetContactsServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetContactsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetRobotInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetRobotInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SaveRobotInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SaveRobotInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CreateGroupServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CreateGroupServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AddFriendsServlet</servlet-name>
+        <servlet-class>ssoft.servlet.AddFriendsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ConfirmFriendsServlet</servlet-name>
+        <servlet-class>ssoft.servlet.ConfirmFriendsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CreateOfficialaccountServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CreateOfficialaccountServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SaveGroupSoundServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SaveGroupSoundServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>RemoveGroupMemberServlet</servlet-name>
+        <servlet-class>ssoft.servlet.RemoveGroupMemberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AddGroupMemberServlet</servlet-name>
+        <servlet-class>ssoft.servlet.AddGroupMemberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetMessageSoundServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetMessageSoundServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetPasswordLengthServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetPasswordLengthServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>ssoft.servlet.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>FollowOfficialServlet</servlet-name>
+        <servlet-class>ssoft.servlet.FollowOfficialServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetGroupMemberServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetGroupMemberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckGroupMemberServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckGroupMemberServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CreateDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CreateDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CreateIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CreateIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>LikeDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.LikeDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>FavoriteDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.FavoriteDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>UnlikeDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.UnlikeDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>RemarkDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.RemarkDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ReportDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.ReportDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ModifyDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.ModifyDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SeekUserServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SeekUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetAddFriendFromInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetAddFriendFromInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>DestroyDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.DestroyDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CloseDiaryShareServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CloseDiaryShareServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetGroupDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetGroupDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetOfficialaccountDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetOfficialaccountDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetIslandDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetIslandDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetPersonalPhotoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetPersonalPhotoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetGroupPhotoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetGroupPhotoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetFavoriteDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetFavoriteDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetFriendDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetFriendDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetDiaryRemarkServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetDiaryRemarkServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetHotIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetHotIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SearchIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SearchIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetUserIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetUserIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetUserDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetUserDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>UnfavoriteDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.UnfavoriteDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetFriendCircleServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetFriendCircleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetNearbyOfficialServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetNearbyOfficialServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>TransmitDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.TransmitDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetDiaryLikeUserServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetDiaryLikeUserServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>ssoft.servlet.admin.AdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ValiImg</servlet-name>
+        <servlet-class>ssoft.servlet.ValiImg</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>HandleReportServlet</servlet-name>
+        <servlet-class>ssoft.servlet.admin.HandleReportServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>ssoft.servlet.admin.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>IslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.admin.IslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetFriendInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetFriendInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SetFriendInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SetFriendInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetMengdaoPageInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetMengdaoPageInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetMyPhotoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetMyPhotoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetMyFavoriteDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetMyFavoriteDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetMyShareToFriendDiaryServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetMyShareToFriendDiaryServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AttentionIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.AttentionIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>UnAttentionIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.UnAttentionIslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetLastThreePhotoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetLastThreePhotoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>DeleteFriendServlet</servlet-name>
+        <servlet-class>ssoft.servlet.DeleteFriendServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>SaveNativeInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.SaveNativeInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetNativeInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetNativeInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetOfficialaccountPositionServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetOfficialaccountPositionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetLastFriendCircleServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetLastFriendCircleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetNationPublicInfoServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetNationPublicInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ResetGroupNameServlet</servlet-name>
+        <servlet-class>ssoft.servlet.ResetGroupNameServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckDiary2GroupServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckDiary2GroupServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckDiary2OfficialServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckDiary2OfficialServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckDiary2IslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckDiary2IslandServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckFriendCircleUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckFriendCircleUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckMyDiaryUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckMyDiaryUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckCollectDiaryUpdateSetvlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckCollectDiaryUpdateSetvlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckMyPhotoUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckMyPhotoUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckGroupDiaryUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckGroupDiaryUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckOfficialDiaryUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckOfficialDiaryUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckIslandDiaryUpdateServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckIslandDiaryUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckGroupExistServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckGroupExistServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>CheckInfoByPhoneServlet</servlet-name>
+        <servlet-class>ssoft.servlet.CheckInfoByPhoneServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>AddSuggestionServlet</servlet-name>
+        <servlet-class>ssoft.servlet.AddSuggestionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetGroupMemberNumServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetGroupMemberNumServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>VersionAdminServlet</servlet-name>
+        <servlet-class>ssoft.servlet.admin.VersionAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>UpdateApkServlet</servlet-name>
+        <servlet-class>ssoft.servlet.UpdateApkServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetAllIslandServlet</servlet-name>
+        <servlet-class>ssoft.servlet.GetAllIslandServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckBindServlet</servlet-name>
+        <url-pattern>/CheckBindServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SmsVerifyServlet</servlet-name>
+        <url-pattern>/SmsVerifyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckPhoneServlet</servlet-name>
+        <url-pattern>/CheckPhoneServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetrievePasswordServlet</servlet-name>
+        <url-pattern>/RetrievePasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveSyssetServlet</servlet-name>
+        <url-pattern>/SaveSyssetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetSyssetServlet</servlet-name>
+        <url-pattern>/GetSyssetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveBaseInfoServlet</servlet-name>
+        <url-pattern>/SaveBaseInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetBaseInfoServlet</servlet-name>
+        <url-pattern>/GetBaseInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetContactsServlet</servlet-name>
+        <url-pattern>/GetContactsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetRobotInfoServlet</servlet-name>
+        <url-pattern>/GetRobotInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveRobotInfoServlet</servlet-name>
+        <url-pattern>/SaveRobotInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateGroupServlet</servlet-name>
+        <url-pattern>/CreateGroupServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddFriendsServlet</servlet-name>
+        <url-pattern>/AddFriendsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfirmFriendsServlet</servlet-name>
+        <url-pattern>/ConfirmFriendsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateOfficialaccountServlet</servlet-name>
+        <url-pattern>/CreateOfficialaccountServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveGroupSoundServlet</servlet-name>
+        <url-pattern>/SaveGroupSoundServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveGroupMemberServlet</servlet-name>
+        <url-pattern>/RemoveGroupMemberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddGroupMemberServlet</servlet-name>
+        <url-pattern>/AddGroupMemberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMessageSoundServlet</servlet-name>
+        <url-pattern>/GetMessageSoundServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPasswordLengthServlet</servlet-name>
+        <url-pattern>/GetPasswordLengthServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/ResetPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FollowOfficialServlet</servlet-name>
+        <url-pattern>/FollowOfficialServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetGroupMemberServlet</servlet-name>
+        <url-pattern>/GetGroupMemberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckGroupMemberServlet</servlet-name>
+        <url-pattern>/CheckGroupMemberServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateDiaryServlet</servlet-name>
+        <url-pattern>/CreateDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateIslandServlet</servlet-name>
+        <url-pattern>/CreateIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LikeDiaryServlet</servlet-name>
+        <url-pattern>/LikeDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FavoriteDiaryServlet</servlet-name>
+        <url-pattern>/FavoriteDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnlikeDiaryServlet</servlet-name>
+        <url-pattern>/UnlikeDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemarkDiaryServlet</servlet-name>
+        <url-pattern>/RemarkDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReportDiaryServlet</servlet-name>
+        <url-pattern>/ReportDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModifyDiaryServlet</servlet-name>
+        <url-pattern>/ModifyDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SeekUserServlet</servlet-name>
+        <url-pattern>/SeekUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAddFriendFromInfoServlet</servlet-name>
+        <url-pattern>/GetAddFriendFromInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DestroyDiaryServlet</servlet-name>
+        <url-pattern>/DestroyDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CloseDiaryShareServlet</servlet-name>
+        <url-pattern>/CloseDiaryShareServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetGroupDiaryServlet</servlet-name>
+        <url-pattern>/GetGroupDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetOfficialaccountDiaryServlet</servlet-name>
+        <url-pattern>/GetOfficialaccountDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetIslandDiaryServlet</servlet-name>
+        <url-pattern>/GetIslandDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPersonalPhotoServlet</servlet-name>
+        <url-pattern>/GetPersonalPhotoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetGroupPhotoServlet</servlet-name>
+        <url-pattern>/GetGroupPhotoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFavoriteDiaryServlet</servlet-name>
+        <url-pattern>/GetFavoriteDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFriendDiaryServlet</servlet-name>
+        <url-pattern>/GetFriendDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDiaryRemarkServlet</servlet-name>
+        <url-pattern>/GetDiaryRemarkServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetHotIslandServlet</servlet-name>
+        <url-pattern>/GetHotIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchIslandServlet</servlet-name>
+        <url-pattern>/SearchIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetUserIslandServlet</servlet-name>
+        <url-pattern>/GetUserIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetUserDiaryServlet</servlet-name>
+        <url-pattern>/GetUserDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnfavoriteDiaryServlet</servlet-name>
+        <url-pattern>/UnfavoriteDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFriendCircleServlet</servlet-name>
+        <url-pattern>/GetFriendCircleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetNearbyOfficialServlet</servlet-name>
+        <url-pattern>/GetNearbyOfficialServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TransmitDiaryServlet</servlet-name>
+        <url-pattern>/TransmitDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDiaryLikeUserServlet</servlet-name>
+        <url-pattern>/GetDiaryLikeUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValiImg</servlet-name>
+        <url-pattern>/ValiImg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HandleReportServlet</servlet-name>
+        <url-pattern>/HandleReportServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IslandServlet</servlet-name>
+        <url-pattern>/IslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFriendInfoServlet</servlet-name>
+        <url-pattern>/GetFriendInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetFriendInfoServlet</servlet-name>
+        <url-pattern>/SetFriendInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMengdaoPageInfoServlet</servlet-name>
+        <url-pattern>/GetMengdaoPageInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMyPhotoServlet</servlet-name>
+        <url-pattern>/GetMyPhotoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMyFavoriteDiaryServlet</servlet-name>
+        <url-pattern>/GetMyFavoriteDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMyShareToFriendDiaryServlet</servlet-name>
+        <url-pattern>/GetMyShareToFriendDiaryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AttentionIslandServlet</servlet-name>
+        <url-pattern>/AttentionIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnAttentionIslandServlet</servlet-name>
+        <url-pattern>/UnAttentionIslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetLastThreePhotoServlet</servlet-name>
+        <url-pattern>/GetLastThreePhotoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteFriendServlet</servlet-name>
+        <url-pattern>/DeleteFriendServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveNativeInfoServlet</servlet-name>
+        <url-pattern>/SaveNativeInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetNativeInfoServlet</servlet-name>
+        <url-pattern>/GetNativeInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetOfficialaccountPositionServlet</servlet-name>
+        <url-pattern>/GetOfficialaccountPositionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetLastFriendCircleServlet</servlet-name>
+        <url-pattern>/GetLastFriendCircleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetNationPublicInfoServlet</servlet-name>
+        <url-pattern>/GetNationPublicInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResetGroupNameServlet</servlet-name>
+        <url-pattern>/ResetGroupNameServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckDiary2GroupServlet</servlet-name>
+        <url-pattern>/CheckDiary2GroupServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckDiary2OfficialServlet</servlet-name>
+        <url-pattern>/CheckDiary2OfficialServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckDiary2IslandServlet</servlet-name>
+        <url-pattern>/CheckDiary2IslandServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckFriendCircleUpdateServlet</servlet-name>
+        <url-pattern>/CheckFriendCircleUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckMyDiaryUpdateServlet</servlet-name>
+        <url-pattern>/CheckMyDiaryUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckCollectDiaryUpdateSetvlet</servlet-name>
+        <url-pattern>/CheckCollectDiaryUpdateSetvlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckMyPhotoUpdateServlet</servlet-name>
+        <url-pattern>/CheckMyPhotoUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckGroupDiaryUpdateServlet</servlet-name>
+        <url-pattern>/CheckGroupDiaryUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckOfficialDiaryUpdateServlet</servlet-name>
+        <url-pattern>/CheckOfficialDiaryUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckIslandDiaryUpdateServlet</servlet-name>
+        <url-pattern>/CheckIslandDiaryUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckGroupExistServlet</servlet-name>
+        <url-pattern>/CheckGroupExistServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckInfoByPhoneServlet</servlet-name>
+        <url-pattern>/CheckInfoByPhoneServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddSuggestionServlet</servlet-name>
+        <url-pattern>/AddSuggestionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetGroupMemberNumServlet</servlet-name>
+        <url-pattern>/GetGroupMemberNumServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VersionAdminServlet</servlet-name>
+        <url-pattern>/VersionAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateApkServlet</servlet-name>
+        <url-pattern>/UpdateApkServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>GetAllIslandServlet</servlet-name>
+    <url-pattern>/GetAllIslandServlet</url-pattern>
+</servlet-mapping>
+
+
+    <!-- Servlet配置结束 -->
+
+    <!-- 过滤器配置开始 -->
+    <filter>
+        <description>全站乱码过滤器</description>
+        <filter-name>EncodeFilter</filter-name>
+        <filter-class>ssoft.filter.EncodeFilter</filter-class>
+    </filter>
+    <!-- 过滤器配置结束 -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
